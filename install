@@ -1,0 +1,41 @@
+#!/bin/bash
+
+LIBRARYPATH="$HOME/.local/share/Steam"
+
+read -p "Where is your steam library located? [${LIBRARYPATH}]: " custompath
+: ${custompath:-$LIBRARYPATH}
+
+echo "Recording path."
+touch $HOME/.oneshot_linux_loc.txt
+echo $LIBRARYPATH > $HOME/.oneshot_linux_loc.txt
+
+echo "Patching oneshot in $LIBRARYPATH"
+
+echo "Installing fix_libs.sh"
+if [ -f $LIBRARYPATH/steamapps/common/OneShot/fix_libs.sh ]; then
+	echo "Already installed"
+else
+	cp fix_libs.sh $LIBRARYPATH/steamapps/common/OneShot/
+	chmod +x $HOME/.local/share/Steam/steamapps/common/OneShot/fix_libs.sh
+fi
+
+echo "Installing journal.sh"
+if [ -f $LIBRARYPATH/steamapps/common/OneShot/journal.sh ]; then
+	echo "Already installed"
+else
+	cp journal.sh $LIBRARYPATH/steamapps/common/OneShot/
+	chmod +x $LIBRARYPATH/steamapps/common/OneShot/journal.sh
+fi
+
+echo "Installing onejournal"
+chmod +x onejournal
+if [ -f /usr/bin/onejournal ]; then
+	echo "Already installed"
+else
+	sudo cp onejournal /usr/bin/
+	sudo chmod +x /usr/bin/onejournal
+fi
+
+echo "Fixing libraries"
+cd $LIBRARYPATH/steamapps/common/OneShot/
+sh fix_libs.sh

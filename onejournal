@@ -1,0 +1,5 @@
+#!/bin/bash
+
+location=$(<$HOME/.oneshot_linux_loc.txt)
+cd $location/steamapps/common/OneShot/
+sh journal.sh
