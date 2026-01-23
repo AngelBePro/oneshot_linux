@@ -2,13 +2,15 @@ Credits to [RedstoneRuler](https://github.com/RedstoneRuler) and [CaveJohnson](h
 
 # Installing OneShot on Linux
 
-If you're using a Linux-based operating system, the Steam version of OneShot won't work out of the box. You can use this small program to patch OneShot.
+If you are using a Linux-based operating system, the Steam version of OneShot will not work out of the box. You can use this small script to patch OneShot.
 
-**This guide assumes you have the Steam version of OneShot already installed, and that your system is properly configured and up-to-date.**
+**Please update your system before attempting to patch OneShot.**
+
 
 ## Install git
 
-To download this program, you'll need to install a program called git. Install git using your distrobution's native package manager.
+To download this script and associated files, you'll need to install a program called git.
+Install git using your distribution's native package manager.
 
 ###### Debian, Ubuntu, Mint, and derivatives
 `sudo apt install git`
@@ -22,12 +24,19 @@ To download this program, you'll need to install a program called git. Install g
 ###### OpenSuse, and derivatives
 `sudo zypper in git`
 
+
 ## Patch OneShot
 
-Finally, to patch OneShot, run the following command:
-
+ Download this repository and run the patch script.
 ```
-git clone https://github.com/Mizosu97/oneshot_linux && cd oneshot_linux && chmod +x install && ./install
+  git clone https://github.com/xnkhi/oneshot_linux
+  cd oneshot_linux
+  chmod +x patch
+  ./patch
 ```
 
-When you get to the part where you need to use the clover app, run the `onejournal` command in your terminal instead.
+
+## Notes
+
+1. OneShot requires a proper floating desktop environment. Try either KDE Plasma or XFCE.
+2. There is a stage in the game where you will need to run a certain "clover" app. At this stage, run the `onejournal` command in your terminal instead.
