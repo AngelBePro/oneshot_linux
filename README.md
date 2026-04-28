@@ -39,5 +39,4 @@ Install git using your distribution's native package manager.
 ## Notes
 
 1. OneShot requires a proper floating desktop environment. Try either KDE Plasma or XFCE.
-2. There is a stage in the game where you will need to run a certain "clover" app. At this stage, run the `onejournal` command in your terminal instead.
-3. Use the Legacy runtime 1.0 as the specific Steam Play compatibility tool, and based on what distro you are using install qt5-tools (this is the package name for arch linux). You will need this to allow the game to change your wallpaper.
+2. Use the Legacy runtime 1.0 as the specific Steam Play compatibility tool, and based on what distro you are using install qt5-tools (this is the package name for Arch Linux). You will need this to allow the game to change your wallpaper.
