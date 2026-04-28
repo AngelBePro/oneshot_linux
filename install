@@ -18,13 +18,10 @@ else
 	cp clover.png $LIBRARYPATH/steamapps/common/OneShot/_______.png
 fi
 
+# Remove check for fix_libs.sh if it exists as that does not allow for updating the script
 echo "Installing fix_libs.sh"
-if [ -f $LIBRARYPATH/steamapps/common/OneShot/fix_libs.sh ]; then
-	echo "Already installed"
-else
-	cp fix_libs.sh $LIBRARYPATH/steamapps/common/OneShot/
-	chmod +x $HOME/.local/share/Steam/steamapps/common/OneShot/fix_libs.sh
-fi
+cp fix_libs.sh $LIBRARYPATH/steamapps/common/OneShot/
+chmod +x $HOME/.local/share/Steam/steamapps/common/OneShot/fix_libs.sh
 
 # Fixed the intended way for the clover app to be accessed so the scripts will no longer be needed
 
