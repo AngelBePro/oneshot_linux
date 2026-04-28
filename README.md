@@ -31,8 +31,8 @@ Install git using your distribution's native package manager.
 ```
   git clone https://github.com/xnkhi/oneshot_linux
   cd oneshot_linux
-  chmod +x patch
-  ./patch
+  chmod +x install
+  ./install
 ```
 
 
